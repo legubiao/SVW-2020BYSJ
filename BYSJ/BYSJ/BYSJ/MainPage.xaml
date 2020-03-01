@@ -9,9 +9,10 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!test from zsl" 
+        <Label Text="Welcome to Xamarin.Forms!"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+        <Label Text="Test by Biao On Macos"/>
     </StackLayout>
 
 </ContentPage>

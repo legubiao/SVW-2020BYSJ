@@ -122,13 +122,13 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\BYSJ\BYSJ.csproj">
-      <Project>{C9CB8E30-5C00-4C5C-AC28-F9B7F85C0C75}</Project>
+      <Project>{79D10A77-FD7B-4431-9A79-82B15AE5EC32}</Project>
       <Name>BYSJ</Name>
     </ProjectReference>
   </ItemGroup>
