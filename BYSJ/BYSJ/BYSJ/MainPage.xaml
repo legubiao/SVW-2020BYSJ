@@ -16,10 +16,19 @@
         <StackLayout
             Margin="10,10">
             <Entry Placeholder="账号"
-               Margin="30,10 "/>
+                   Margin="30,10 "
+                   ClearButtonVisibility="WhileEditing"
+                   TextChanged="AccountInput"
+                   BackgroundColor="White"
+                   />
 
             <Entry Placeholder="密码"
-               Margin="30,10 "/>
+                   IsPassword="true"
+                   Margin="30,10 "
+                   ClearButtonVisibility="WhileEditing"
+                   TextChanged="PasswordInput"
+                   BackgroundColor="White"
+                   />
 
             <Grid
                 Margin="30,10">
@@ -38,7 +47,8 @@
                     TextColor="White"
                     FontAttributes="Bold"
                     Margin="10,10"
-                    Text="登陆" />
+                    Text="登陆"
+                    Clicked="Button_Clicked"/>
 
                 <Button
                     Grid.Row="0"
