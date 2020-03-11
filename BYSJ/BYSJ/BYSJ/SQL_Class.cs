@@ -21,10 +21,10 @@ namespace BYSJ
             sqlConn = new SqlConnection(sqlStr.ToString());
         }
 
-        public Boolean IDCHeck(string username, string password)
+        public bool IDCHeck(string username, string password)
         {
             sqlConn.Open();
-            string sqlCommStr = "SELECT password FROM pwd WHERE name ='"+username+"'";
+            string sqlCommStr = "SELECT password FROM pwd WHERE name ='" + username + "'";
             SqlCommand sqlComm = new SqlCommand(sqlCommStr, sqlConn);
             SqlDataReader dataReader = sqlComm.ExecuteReader();
             dataReader.Read();
