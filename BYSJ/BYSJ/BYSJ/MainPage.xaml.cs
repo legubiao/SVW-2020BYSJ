@@ -18,6 +18,7 @@ namespace BYSJ
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false); //隐藏导航栏
         }
 
         private void login_Clicked(object sender, EventArgs e)
