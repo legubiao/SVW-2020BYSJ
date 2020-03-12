@@ -27,7 +27,7 @@ namespace BYSJ
             if (database.IDCHeck(account, password))
             {
                 DisplayAlert("Alert", "Login Success", "OK");
-                Navigation.PushAsync(new HomePage());
+                Navigation.PushAsync(new MasterHome());
             }
             else
             {

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BYSJ.MasterHomeDetail"
+             Title="Welcome">
+  <StackLayout Padding="10">
+    <Label Text="欢迎来到上汽大众备件管理系统，请点击右上角选项按钮来选择接下来的操作"/>
+  </StackLayout>
+</ContentPage>
