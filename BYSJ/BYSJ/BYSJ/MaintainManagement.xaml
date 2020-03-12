@@ -6,10 +6,39 @@
              mc:Ignorable="d"
              x:Class="BYSJ.MaintainManagement">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="这是维护记录界面，之后会有维护记录的查询功能"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="#F0F0F0">
+            <Label Text="维修查询" TextColor="Black" HorizontalOptions="Center" FontSize="40" />
+            <Grid Margin="30,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Entry
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    ClearButtonVisibility="WhileEditing"
+                    BackgroundColor="White"
+                    Margin="10,10"
+                    TextColor="Black"
+                    Placeholder="请输入日期"/>
+
+                <Entry
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    ClearButtonVisibility="WhileEditing"
+                    BackgroundColor="White"
+                    Margin="10,10"
+                    TextColor="Black"
+                    Placeholder="请输入编号"/>
+            </Grid>
+            <Button Margin="30,10" HorizontalOptions="Center" BackgroundColor="Green" TextColor="White" Text="维护记录查询" FontSize="20"/>
+            <Label HorizontalOptions="Center" Margin="50,100" Text="信息显示" TextColor="Black" FontSize="50" />
+            <Button Margin="30,10" HorizontalOptions="Center" BackgroundColor="CadetBlue" TextColor="White" Text="维护记录添加" FontSize="20"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
