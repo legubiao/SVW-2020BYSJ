@@ -4,11 +4,16 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="BYSJ.MainPage">
+             x:Class="BYSJ.MainPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:NavigationPage.IsNavigationBarTranslucent="true"             
+             >
    
 
     <StackLayout
+        NavigationPage.HasNavigationBar="False"
         BackgroundColor = "#052757">
+        
         <!-- Place new controls here -->
         <Image Source="https://files.toodaylab.com/2019/09/vw_logo_20190912023704_00.jpg"
                Margin= "20,20"/>

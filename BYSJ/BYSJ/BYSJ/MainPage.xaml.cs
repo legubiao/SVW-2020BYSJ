@@ -18,6 +18,7 @@ namespace BYSJ
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false); //隐藏导航栏
         }
 
         private void login_Clicked(object sender, EventArgs e)
@@ -26,7 +27,7 @@ namespace BYSJ
             if (database.IDCHeck(account, password))
             {
                 DisplayAlert("Alert", "Login Success", "OK");
-                Navigation.PushAsync(new HomePage());
+                Navigation.PushAsync(new MasterHome());
             }
             else
             {
