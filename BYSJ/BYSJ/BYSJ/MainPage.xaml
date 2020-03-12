@@ -48,7 +48,7 @@
                     FontAttributes="Bold"
                     Margin="10,10"
                     Text="登陆"
-                    Clicked="Button_Clicked"/>
+                    Clicked="login_Clicked"/>
 
                 <Button
                     Grid.Row="0"
@@ -57,7 +57,9 @@
                     TextColor="White"
                     Margin="10,10"
                     FontAttributes="Bold"
-                    Text="注册" />
+                    Text="注册"
+                    Clicked="Button_Clicked"
+                    />
             </Grid>
         </StackLayout>
 

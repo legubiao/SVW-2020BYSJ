@@ -20,12 +20,13 @@ namespace BYSJ
             InitializeComponent();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void login_Clicked(object sender, EventArgs e)
         {
             SQL_Class database = new SQL_Class();
             if (database.IDCHeck(account, password))
             {
                 DisplayAlert("Alert", "Login Success", "OK");
+                Navigation.PushAsync(new HomePage());
             }
             else
             {
@@ -41,6 +42,11 @@ namespace BYSJ
         private void PasswordInput(Entry sender, TextChangedEventArgs e)
         {
             this.password = sender.Text.ToString();
+        }
+
+        void Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new RegisterPage());
         }
     }
 }
