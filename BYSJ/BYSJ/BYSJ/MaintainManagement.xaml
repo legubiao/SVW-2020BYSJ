@@ -7,7 +7,7 @@
              x:Class="BYSJ.MaintainManagement">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#F0F0F0">
-            <Label Text="维修查询" TextColor="Black" HorizontalOptions="Center" FontSize="40" />
+            <Label Text="维修查询" TextColor="Black" HorizontalOptions="Center" FontSize="40" FontAttributes="Bold"  />
             <Grid Margin="30,10">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -24,7 +24,8 @@
                     BackgroundColor="White"
                     Margin="10,10"
                     TextColor="Black"
-                    Placeholder="请输入日期"/>
+                    Placeholder="请输入日期"
+                    />
 
                 <Entry
                     Grid.Row="0"

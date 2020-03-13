@@ -6,13 +6,40 @@
              mc:Ignorable="d"
              x:Class="BYSJ.PartsManagement">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="这是部件管理页面，将来会放入部件管理部分"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Label Text="包括部件查询和部件增减"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="#F0F0F0">
+            <Label Text="备件查询" TextColor="Black" HorizontalOptions="Center" FontSize="40" FontAttributes="Bold"  />
+            <Grid Margin="30,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Entry
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    ClearButtonVisibility="WhileEditing"
+                    BackgroundColor="White"
+                    Margin="10,10"
+                    TextColor="Black"
+                    Placeholder="请输入日期"/>
+
+                <Entry
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    ClearButtonVisibility="WhileEditing"
+                    BackgroundColor="White"
+                    Margin="10,10"
+                    TextColor="Black"
+                    Placeholder="请输入编号"/>
+            </Grid>
+            <Button Margin="30,10" HorizontalOptions="Center" BackgroundColor="Green" TextColor="White" Text="备件查询" FontSize="20"/>
+            <Label HorizontalOptions="Center" Margin="50,100" Text="信息显示" TextColor="Black" FontSize="50" />
+            <Button Margin="30,10" HorizontalOptions="Center" BackgroundColor="CadetBlue" TextColor="White" Text="备件添加" FontSize="20"/>
+            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
