@@ -9,9 +9,14 @@
         <Grid>
             <Grid.RowDefinitions>
 
+                <RowDefinition Height="4*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height=".5*"/>
+                <RowDefinition Height=".5*"/>
+                <RowDefinition Height=".5*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
@@ -24,11 +29,29 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="登陆人：" FontSize="Medium" VerticalOptions="Center"/>
-            <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="等级：" FontSize="Medium" VerticalOptions="Center"/>
-            <Label Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="组别:" FontSize="Medium" VerticalOptions="Center"/>
-            <Label Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="负责区域：" FontSize="Medium" VerticalOptions="Center"/>
+            <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" 
+                   MinimumHeightRequest="20" BorderColor="LightGray" CornerRadius="0" 
+               HasShadow="True" BackgroundColor="WhiteSmoke">
+                <Label  FontSize="Large" Text="用户头像or用户名" 
+                    VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+            </Frame>
 
+            <Label Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"  Text="用户名:" HorizontalOptions="Center"
+               FontSize="Large"/>
+            <Label Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="权限等级:" HorizontalOptions="Center"
+               FontSize="Large"/>
+            <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Text="账号:" HorizontalOptions="Center"
+               FontSize="Large" />
+
+            <Label Grid.Row="6" Grid.Column="1"  Grid.ColumnSpan="3" Text="数据库登陆次数:" HorizontalOptions="Start"
+               FontSize="Medium"/>
+            <Label Grid.Row="7" Grid.Column="1"  Grid.ColumnSpan="3" Text="备件操作次数：" HorizontalOptions="Start"
+               FontSize="Medium" />
+            <Label Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" Text="维护操作次数：" HorizontalOptions="Start"
+               FontSize="Medium" />
+
+            <Button Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="4" Text="修改密码" 
+                    BackgroundColor="CadetBlue" FontSize="Large" FontAttributes="Bold" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>
