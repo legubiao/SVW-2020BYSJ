@@ -1,21 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BYSJ.Services;
 using Xamarin.Forms;
 
-namespace BYSJ
+namespace BYSJ.Views
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(false)]
-    public partial class MainPage : ContentPage
+    public partial class LoginPage : ContentPage
     {
         string account;
         string password;
-        public MainPage()
+
+        public LoginPage()
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false); //隐藏导航栏
@@ -23,10 +17,11 @@ namespace BYSJ
 
         private void login_Clicked(object sender, EventArgs e)
         {
+            //string token = RestService.GetToken(account, password);
+            //f (token != null)
             SQL_Class database = new SQL_Class();
             if (database.IDCHeck(account, password))
             {
-                DisplayAlert("Alert", "Login Success", "OK");
                 Navigation.PushAsync(new MasterHome());
             }
             else
