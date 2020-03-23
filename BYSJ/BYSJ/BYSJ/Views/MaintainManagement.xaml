@@ -4,42 +4,71 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="BYSJ.MaintainManagement">
+             x:Class="BYSJ.MaintainManagement"
+             Title="维护记录管理">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#F0F0F0">
-            <Label Text="维修查询" TextColor="Black" HorizontalOptions="Center" FontSize="40" FontAttributes="Bold"  />
-            <Grid Margin="30,10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="查询参数输入">
 
-                <Entry
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    ClearButtonVisibility="WhileEditing"
-                    BackgroundColor="White"
-                    Margin="10,10"
-                    TextColor="Black"
-                    Placeholder="请输入日期"
-                    />
+                    <EntryCell
+                        Label="维护时间"
+                        Placeholder="在此输入维护记录的时间" />
 
-                <Entry
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    ClearButtonVisibility="WhileEditing"
-                    BackgroundColor="White"
-                    Margin="10,10"
-                    TextColor="Black"
-                    Placeholder="请输入编号"/>
-            </Grid>
-            <Button Margin="30,10" HorizontalOptions="Center" BackgroundColor="Green" TextColor="White" Text="维护记录查询" FontSize="20"/>
-            <Label HorizontalOptions="Center" Margin="50,100" Text="信息显示" TextColor="Black" FontSize="50" />
-            <Button Margin="30,10" HorizontalOptions="Center" BackgroundColor="CadetBlue" TextColor="White" Text="维护记录添加" FontSize="20"/>
+                    <EntryCell
+                        Label="维护编号"
+                        Placeholder="输入维护活动的编号"/>
+                    <ViewCell>
+                        <Grid
+                            Margin="20,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
 
-        </StackLayout>
+                            <Button
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                BackgroundColor="Green"
+                                Margin="0,5"
+                                TextColor="White"
+                                Text="查询"
+                                FontAttributes="Bold"
+                                
+                                />
+                            <Button
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                BackgroundColor="BlueViolet"
+                                Margin="0,5"
+                                TextColor="White"
+                                Text="添加记录"
+                                FontAttributes="Bold"
+                                
+                                />
+                            <Button
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                BackgroundColor="CadetBlue"
+                                Margin="0,5"
+                                TextColor="White"
+                                Text="记录修改"
+                                FontAttributes="Bold"
+                                
+                                />
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+
+                <TableSection Title="查询结果"
+                              >
+
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </ContentPage.Content>
 </ContentPage>

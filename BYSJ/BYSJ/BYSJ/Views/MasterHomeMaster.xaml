@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="BYSJ.MasterHomeMaster"
-             Title="Master">
+             Title="菜单">
   <StackLayout>
     <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
@@ -21,6 +21,7 @@
           </x:Array>
       </d:ListView.ItemsSource>
       <ListView.Header>
+          <!--这一部分是菜单栏上侧的设置，文字的位置由Grid控制-->
         <Grid BackgroundColor="#03A9F4">
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>

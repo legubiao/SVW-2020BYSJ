@@ -19,6 +19,8 @@ namespace BYSJ.Views
         {
             //string token = RestService.GetToken(account, password);
             //f (token != null)
+            Navigation.PushAsync(new MasterHome());
+            /*
             SQL_Class database = new SQL_Class();
             if (database.IDCHeck(account, password))
             {
@@ -28,6 +30,7 @@ namespace BYSJ.Views
             {
                 DisplayAlert("Alert", "Invalid password", "OK");
             }
+            */
         }
 
         private void AccountInput(Entry sender, TextChangedEventArgs e)

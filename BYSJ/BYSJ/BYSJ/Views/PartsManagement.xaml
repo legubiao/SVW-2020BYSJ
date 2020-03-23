@@ -4,42 +4,72 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="BYSJ.PartsManagement">
+             x:Class="BYSJ.PartsManagement"
+             Title="备件查询">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#F0F0F0">
-            <Label Text="备件查询" TextColor="Black" HorizontalOptions="Center" FontSize="40" FontAttributes="Bold"  />
-            <Grid Margin="30,10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="查询参数输入">
 
-                <Entry
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    ClearButtonVisibility="WhileEditing"
-                    BackgroundColor="White"
-                    Margin="10,10"
-                    TextColor="Black"
-                    Placeholder="请输入日期"/>
+                    <EntryCell
+                        Label="记录时间"
+                        Placeholder="在此输入备件记录添加的时间" />
 
-                <Entry
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    ClearButtonVisibility="WhileEditing"
-                    BackgroundColor="White"
-                    Margin="10,10"
-                    TextColor="Black"
-                    Placeholder="请输入编号"/>
-            </Grid>
-            <Button Margin="30,10" HorizontalOptions="Center" BackgroundColor="Green" TextColor="White" Text="备件查询" FontSize="20"/>
-            <Label HorizontalOptions="Center" Margin="50,100" Text="信息显示" TextColor="Black" FontSize="50" />
-            <Button Margin="30,10" HorizontalOptions="Center" BackgroundColor="CadetBlue" TextColor="White" Text="备件添加" FontSize="20"/>
-            
+                    <EntryCell
+                        Label="备件编号"
+                        Placeholder="在此输入备件的编号"/>
+                    <ViewCell>
+                        <Grid
+                            Margin="20,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
 
-        </StackLayout>
+                            <Button
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                BackgroundColor="Green"
+                                Margin="0,5"
+                                TextColor="White"
+                                Text="查询"
+                                FontAttributes="Bold"
+                                Clicked="Search_Clicked"
+                                />
+                            <Button
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                BackgroundColor="BlueViolet"
+                                Margin="0,5"
+                                TextColor="White"
+                                Text="添加备件"
+                                FontAttributes="Bold"
+                                Clicked="Add_Clicked"
+                                />
+                            <Button
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                BackgroundColor="CadetBlue"
+                                Margin="0,5"
+                                TextColor="White"
+                                Text="记录修改"
+                                FontAttributes="Bold"
+                                Clicked="Modify_Clicked"
+                                />
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+
+                <TableSection Title="查询结果"
+                              >
+
+                </TableSection>
+            </TableRoot>
+        </TableView>
+  
     </ContentPage.Content>
 </ContentPage>
