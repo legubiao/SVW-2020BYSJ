@@ -2,56 +2,71 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:imgcrop="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.ImageCropView" xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              mc:Ignorable="d"
-             x:Class="BYSJ.UserInfo">
-    <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
+             x:Class="BYSJ.UserInfo"
+             Title="个人信息">
 
-                <RowDefinition Height="4*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height=".5*"/>
-                <RowDefinition Height=".5*"/>
-                <RowDefinition Height=".5*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+    
+   <StackLayout>
+        <Frame  
+            Padding="0"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center"
+            CornerRadius="50"
+            IsClippedToBounds="True"
+            HeightRequest="100"
+            WidthRequest="100"
+            Margin="0,30,0,10"
+            >
+        <Image Source="https://files.toodaylab.com/2019/09/vw_logo_20190912023704_00.jpg"
+                Aspect="AspectFill"/>
+        </Frame>
 
-            <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" 
-                   MinimumHeightRequest="20" BorderColor="LightGray" CornerRadius="0" 
-               HasShadow="True" BackgroundColor="WhiteSmoke">
-                <Label  FontSize="Large" Text="用户头像or用户名" 
-                    VerticalOptions="Center" HorizontalTextAlignment="Center"/>
-            </Frame>
+           <Label
+               HorizontalOptions="CenterAndExpand"
+               FontSize="Large"
+               FontAttributes="Bold"
+               >Administer</Label>
 
-            <Label Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"  Text="用户名:" HorizontalOptions="Center"
-               FontSize="Large"/>
-            <Label Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Text="权限等级:" HorizontalOptions="Center"
-               FontSize="Large"/>
-            <Label Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Text="账号:" HorizontalOptions="Center"
-               FontSize="Large" />
+           <Label
+               HorizontalOptions="CenterAndExpand"
+               FontSize="Large"
+               FontAttributes="Bold">
+               10001
+           </Label>
+       <Frame
+            Margin="30,10">
+           <Grid>
+               <Grid.RowDefinitions>
+                   <RowDefinition />
+                   <RowDefinition/>
+                   <RowDefinition/>
+                   <RowDefinition/>
+               </Grid.RowDefinitions>
+               <Grid.ColumnDefinitions>
+                   <ColumnDefinition/>
+                   <ColumnDefinition/>
+                   <ColumnDefinition/>
+                   <ColumnDefinition/>
+                   <ColumnDefinition/>
+               </Grid.ColumnDefinitions>
 
-            <Label Grid.Row="6" Grid.Column="1"  Grid.ColumnSpan="3" Text="数据库登陆次数:" HorizontalOptions="Start"
-               FontSize="Medium"/>
-            <Label Grid.Row="7" Grid.Column="1"  Grid.ColumnSpan="3" Text="备件操作次数：" HorizontalOptions="Start"
-               FontSize="Medium" />
-            <Label Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" Text="维护操作次数：" HorizontalOptions="Start"
-               FontSize="Medium" />
+               <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="权限等级：" HorizontalOptions="End"
+                   FontSize="Large" />
+               <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Text="登陆次数：" HorizontalOptions="End"
+                   FontSize="Large" />
+               
+               <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Text="备件操作次数：" HorizontalOptions="End"
+                   FontSize="Large" />
+               <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Text="维护操作次数：" HorizontalOptions="End"
+                   FontSize="Large" />
+           </Grid>
+       </Frame>
 
-            <Button Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="4" Text="修改密码" 
-                    BackgroundColor="CadetBlue" FontSize="Large" FontAttributes="Bold" />
-        </Grid>
-    </ContentPage.Content>
+
+       <Button Text="修改密码"/>
+       <Button Text="权限变动"/>
+
+   </StackLayout>
 </ContentPage>

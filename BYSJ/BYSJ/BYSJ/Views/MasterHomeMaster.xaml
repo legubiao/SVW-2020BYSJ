@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="BYSJ.MasterHomeMaster"
+             IconImageSource="Hamburger.png"
              Title="菜单">
   <StackLayout>
     <ListView x:Name="MenuItemsListView"

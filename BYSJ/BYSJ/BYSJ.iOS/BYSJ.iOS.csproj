@@ -116,6 +116,9 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Hamburger.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Hamburger.imageset\hamburger.png" />
+    <ImageAsset Include="Assets.xcassets\Hamburger.imageset\hamburger%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -139,5 +142,8 @@
       <Project>{79D10A77-FD7B-4431-9A79-82B15AE5EC32}</Project>
       <Name>BYSJ</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\Hamburger.imageset\" />
   </ItemGroup>
 </Project>
