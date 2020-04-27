@@ -4,24 +4,44 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
+using BYSJ.Models;
 
 namespace BYSJ.Services
 {
     public static class RestService
     {
-        public static string GetToken(string username,string password)
+        public static async Task<string> GetToken(string username,string password)
         {
-            HttpClient client = new HttpClient() { Timeout = TimeSpan.FromSeconds(30) };
+            HttpClient client = new HttpClient(GetHandler()) { Timeout = TimeSpan.FromSeconds(30) };
 
-            var content = new FormUrlEncodedContent(new Dictionary<string, string>() {
-                        { "username",username },
-                        { "password",password }
+            user User = new user
+            {
+                username = username,
+                password = password
+            };
+            var json = JsonConvert.SerializeObject(User);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await client.PostAsync(API_Info.GetTokenEndPoint, content);
 
-                    });
-            var response = client.PostAsync(API_Info.GetTokenEndPoint, content);
-            
-            string token =  response.Result.Content.ReadAsStringAsync().Result;
-            return token;
+            var responseBody = await response.Content.ReadAsStringAsync();
+            return responseBody;
         }
+        public static async Task<List<repairRecord>> GetRecord()
+        {
+            HttpClient client = new HttpClient(GetHandler()) { Timeout = TimeSpan.FromSeconds(30) };
+            var response = await client.GetAsync(API_Info.GetMaintainRecord);
+            var content = await response.Content.ReadAsStringAsync();
+            var Items = JsonConvert.DeserializeObject<List<repairRecord>>(content);
+            return Items;
+        }
+
+        static HttpClientHandler GetHandler()
+        {
+            var httpclientHandler = new HttpClientHandler();
+            httpclientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, error) => true;
+            return httpclientHandler;
+        }
+
     }
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -83,22 +83,18 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\drawable\Hamburger.png">
-      <SubType></SubType>
-      <Generator></Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\Hamburger%402x.png">
-      <SubType></SubType>
-      <Generator></Generator>
+      <SubType>
+      </SubType>
+      <Generator>
+      </Generator>
     </AndroidResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BYSJ\BYSJ.csproj">
       <Project>{79D10A77-FD7B-4431-9A79-82B15AE5EC32}</Project>
       <Name>BYSJ</Name>
     </ProjectReference>
   </ItemGroup>
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

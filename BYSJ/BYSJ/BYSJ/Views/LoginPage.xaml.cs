@@ -15,10 +15,11 @@ namespace BYSJ.Views
             NavigationPage.SetHasNavigationBar(this, false); //隐藏导航栏
         }
 
-        private void login_Clicked(object sender, EventArgs e)
+        private async void login_Clicked(object sender, EventArgs e)
         {
-            //string token = RestService.GetToken(account, password);
+            //string token = await RestService.GetToken(account, password);
             //f (token != null)
+            //DisplayAlert("验证成功", "服务器返回的token为："+token, "OK");
             Navigation.PushAsync(new MasterHome());
             /*
             SQL_Class database = new SQL_Class();

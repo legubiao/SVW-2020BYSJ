@@ -116,9 +116,15 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Hamburger.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Hamburger.imageset\hamburger.png" />
-    <ImageAsset Include="Assets.xcassets\Hamburger.imageset\hamburger%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Hamburger.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Hamburger.imageset\hamburger.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Hamburger.imageset\hamburger%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
