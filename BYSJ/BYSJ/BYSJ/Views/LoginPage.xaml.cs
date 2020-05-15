@@ -15,7 +15,7 @@ namespace BYSJ.Views
             NavigationPage.SetHasNavigationBar(this, false); //隐藏导航栏
         }
 
-        private async void login_Clicked(object sender, EventArgs e)
+        private void login_Clicked(object sender, EventArgs e)
         {
             //string token = await RestService.GetToken(account, password);
             //f (token != null)

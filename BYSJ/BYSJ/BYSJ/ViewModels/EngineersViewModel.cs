@@ -6,7 +6,7 @@ using BYSJ.Models;
 
 namespace BYSJ.ViewModels
 {
-    public class EngineersViewModel : INotifyPropertyChanged
+    public class EngineersViewModel
     {
         readonly IList<Engineer> source;
         public ObservableCollection<Engineer> Engineers { get; private set; }
@@ -21,6 +21,5 @@ namespace BYSJ.ViewModels
         {
             //Methods = new ObservableCollection<PredictMethods>(source);
         }
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

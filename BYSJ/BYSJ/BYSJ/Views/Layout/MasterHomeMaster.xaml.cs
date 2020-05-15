@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BYSJ.Views.RepairRecord;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -35,7 +36,7 @@ namespace BYSJ
                 {
                     new MasterHomeMasterMenuItem { Id = 0, Title = "账户" ,TargetType = typeof(UserInfo)},
                     new MasterHomeMasterMenuItem { Id = 1, Title = "备件管理" ,TargetType = typeof(PartsManagement)},
-                    new MasterHomeMasterMenuItem { Id = 2, Title = "维护记录" ,TargetType = typeof(MaintainManagement) },
+                    new MasterHomeMasterMenuItem { Id = 2, Title = "维护管理" ,TargetType = typeof(RepairRecordTabbedPage)},
                     new MasterHomeMasterMenuItem { Id = 2, Title = "库存管理" ,TargetType = typeof(MaintainManagement) },
                     new MasterHomeMasterMenuItem { Id = 3, Title = "维修手册" ,TargetType = typeof(manual)},
                     new MasterHomeMasterMenuItem { Id = 4, Title = "预测" ,TargetType = typeof(Prediction)},

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:BYSJ.ViewModels"
+             mc:Ignorable="d"
+             x:Class="BYSJ.Views.RepairRecord.UnfinishedRecord">
+    <ContentPage.BindingContext>
+        <local:RepairRecordViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <ListView 
+              ItemsSource="{Binding Records}"
+              IsPullToRefreshEnabled="true"
+              ItemTapped="OnTap"
+              RefreshCommand="{Binding RefreshCommand}"
+              Refreshing="OnRefresh"
+            >
+            <ListView.RowHeight>
+                <OnPlatform x:TypeArguments="x:Int32">
+                    <On Platform="iOS, Android" Value="90" />
+                </OnPlatform>
+            </ListView.RowHeight>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ContentView Padding="5">
+                            <Frame OutlineColor="Accent"
+                               Padding="10">
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding FailureMode, StringFormat='{0}|'}"
+                                           FontSize="22"
+                                           VerticalOptions="StartAndExpand" />
+                                        <Label Text="{Binding orderNumber, StringFormat='{0}'}"
+                                           FontSize="22"
+                                           VerticalOptions="StartAndExpand" />
+                                    </StackLayout>
+
+                                    <Label Text="{Binding FailureDetail}"
+                                           FontSize="16"
+                                           VerticalOptions="CenterAndExpand"/>
+                                </StackLayout>
+                            </Frame>
+                        </ContentView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </ContentPage.Content>
+
+</ContentPage>

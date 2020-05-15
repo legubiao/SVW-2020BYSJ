@@ -8,7 +8,7 @@
              x:Class="BYSJ.MaintainManagement"
              Title="维护记录管理">
     <ContentPage.BindingContext>
-        <local:MaintainManageViewModel/>
+        <local:RepairRecordViewModel/>
     </ContentPage.BindingContext>
     
     
@@ -43,8 +43,7 @@
                                 Margin="0,5"
                                 TextColor="White"
                                 Text="查询"
-                                FontAttributes="Bold"
-                                
+                                FontAttributes="Bold"                               
                                 />
                             <Button
                                 Grid.Row="0"
@@ -63,18 +62,13 @@
                                 Margin="0,5"
                                 TextColor="White"
                                 Text="记录修改"
-                                FontAttributes="Bold"
-                                
+                                FontAttributes="Bold"                               
                                 />
                         </Grid>
                     </ViewCell>
                 </TableSection>
-
-                <TableSection Title="查询结果"
-                              >
-
-                </TableSection>
             </TableRoot>
         </TableView>
+        
     </ContentPage.Content>
 </ContentPage>

@@ -27,10 +27,10 @@ namespace BYSJ.Services
             var responseBody = await response.Content.ReadAsStringAsync();
             return responseBody;
         }
-        public static async Task<List<repairRecord>> GetRecord()
+        public static async Task<List<repairRecord>> GetUnfinishedRecord()
         {
             HttpClient client = new HttpClient(GetHandler()) { Timeout = TimeSpan.FromSeconds(30) };
-            var response = await client.GetAsync(API_Info.GetMaintainRecord);
+            var response = await client.GetAsync(API_Info.GetUnfinishedRecord);
             var content = await response.Content.ReadAsStringAsync();
             var Items = JsonConvert.DeserializeObject<List<repairRecord>>(content);
             return Items;
